@@ -1,24 +1,71 @@
 // Iteration #1: Find the maximum
-function maxOfTwoNumbers() {}
-
+function maxOfTwoNumbers(a, b) {
+  if (a > b) {
+    return a;
+  }
+  if (b > a) {
+    return b;
+  }
+  if (a == b) {
+    return a;
+  }
+}
 
 
 // Iteration #2: Find longest word
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
 
-function findLongestWord() {}
+function findLongestWord(words) {
+  if (words.length == 0) {
+    return null;
+  }
+  if (words.length == 1) {
+    return words[0];
+  }
 
+  for (i = 0; i < words.length; i++) {
+    if (longestWord.length < words[i].length) {
+      longestWord = words[i];
+    }
+  }
+  for (i = 0; i < words.length; i++) {
+    if (longestWord.length === words[i].length) {
+      //push to array
+      equalWords.push(words[i]);
+    }
+    console.log('Not other words');
+  }
+    //sort to array
+    equalWords.sort();
+
+    //return logest word
+    return equalWords[0];
+  }
+  
+  
 
 
 // Iteration #3: Calculate the sum
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-function sumNumbers() {}
+function sumNumbers(numbers) {
+  if (numbers.length === 0) {
+    return 0;
+  }
+  if (numbers.length === 1) {
+    return numbers[0];
+  }
+  let arraySum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    arraySum = numbers[i] + arraySum;
+  }
+  return arraySum;
+}
 
-
-
+sumNumbers(numbers);
 // Iteration #3.1 Bonus:
 function sum() {}
+
 
 
 
@@ -26,13 +73,64 @@ function sum() {}
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {}
+function averageNumbers(numbers) {
+  if (numbers.length === 0) {
+    return null;
+  }
+
+  if (numbers.length === 1) {
+    return numbers[0]
+  }
+  let averageNumbers = 0;
+  for(i = 0; i < numbers.length; i++) {
+   
+
+    averageNumbers =  numbers[i] + averageNumbers
+    
+  
+  }
+  return averageNumbers / numbers.length
+}
+
+
+averageNumbers(numbersAvg)
 
 
 // Level 2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
-function averageWordLength() { }
+function averageWordLength(words) {
+  let wordsAverageArray = []
+  let arraySum = 0
+  if(words.length === 0) {
+    return null
+  }
+ 
+  let newArray = []
+
+  for(i = 0; i < words.length; i++){
+
+    let wordsLength = words[i].length
+ 
+    newArray.push(wordsLength)
+
+  }
+
+  console.log(newArray)
+  
+  
+  for(let index = 0; index < newArray.length; index++ ) {
+    arraySum = arraySum + newArray[index]
+   
+    
+  }
+  console.log(arraySum)
+  let arrayAve = arraySum / newArray.length
+  return arrayAve
+
+}
+
+averageWordLength(wordsArr)
 
 // Bonus - Iteration #4.1
 function avg() {}
@@ -52,7 +150,16 @@ const wordsUnique = [
   'bring'
 ];
 
-function uniquifyArray() {}
+function uniquifyArray(words) {
+
+  if (words == 0) {
+    return null
+  }
+
+  return (words)
+}
+
+uniquifyArray(wordsUnique)
 
 
 
